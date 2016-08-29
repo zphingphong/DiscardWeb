@@ -1,4 +1,15 @@
 /***********************************************************************
+*  FONT
+***********************************************************************/
+@font-face {
+    font-family: 'brie_lightregular';
+    src: url('../assets/fonts/bri293-webfont.eot');
+    src: url('../assets/fonts/bri293-webfont.eot?#iefix') format('embedded-opentype'), url('../assets/fonts/bri293-webfont.woff2') format('woff2'), url('../assets/fonts/bri293-webfont.woff') format('woff'), url('../assets/fonts/bri293-webfont.ttf') format('truetype'), url('../assets/fonts/bri293-webfont.svg#brie_lightregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/***********************************************************************
 *  OPAQUE NAVBAR SECTION
 ***********************************************************************/
 .opaque-navbar {
@@ -47,6 +58,9 @@
     background-color: rgba(0,0,0,0.7);
 }
 
+/***********************************************************************
+*  BODY
+***********************************************************************/
 body #details-assets img {
     max-width: 100%;
     max-height: 100%;
