@@ -1,0 +1,50 @@
+/***********************************************************************
+*  OPAQUE NAVBAR SECTION
+***********************************************************************/
+.opaque-navbar {
+    background-color: rgba(0,0,0,0.0);
+    height: 60px;
+    border-bottom: 0px;
+    transition: background-color .5s ease 0s;
+}
+
+.navbar-collapse {
+    border-color: transparent !important;
+    -webkit-box-shadow: none !important;
+}
+
+.opaque-navbar.opaque {
+    background-color: black;
+    height: 60px;
+    transition: background-color .5s ease 0s;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: white;
+    -o-transition:color .2s ease-out;
+    -ms-transition:color .2s ease-out;
+    -moz-transition:color .2s ease-out;
+    -webkit-transition:color .2s ease-out;
+    /* ...and now for the proper property */
+    transition:color .2s ease-out;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+    color: #ff9500;
+    -o-transition:color .2s ease-out;
+    -ms-transition:color .2s ease-out;
+    -moz-transition:color .2s ease-out;
+    -webkit-transition:color .2s ease-out;
+    /* ...and now for the proper property */
+    transition:color .2s ease-out;
+}
+
+body {
+    background:url('../assets/images/cover.jpg') no-repeat center center;
+    background-size:cover;
+
+    /* Workaround for some mobile browsers */
+    min-height:100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
