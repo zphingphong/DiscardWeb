@@ -14,14 +14,23 @@
 <div class="navbar navbar-inverse navbar-fixed-top opaque-navbar">
     <div class="container">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navMain">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navCollapse">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
         </div>
-        <div class="collapse navbar-collapse" id="navMain">
-            <ul class="nav navbar-nav pull-right">
+        <div id="navMain">
+            <ul class="hidden-xs nav navbar-nav pull-right">
+                <li><a href="#">Discard for Customer</a></li>
+                <li><a href="#">Discard for Business</a></li>
+                <li><a href="#">Clients</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="collapse navbar-collapse" id="navCollapse">
+            <ul class="visible-xs nav navbar-nav pull-right">
                 <li><a href="#">Discard for Customer</a></li>
                 <li><a href="#">Discard for Business</a></li>
                 <li><a href="#">Clients</a></li>
@@ -30,19 +39,34 @@
             </ul>
         </div>
     </div>
+</div><!--nav-->
+<div class="container-fluid" id="discard-container">
+    <div class="row">
+        <img src="assets/images/cover.jpg" class="img-responsive"/>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-7" id="details-container">
+            <!--<h1>What is Discard?</h1>-->
+            <h4>How many loyalty cards you have in your wallet?</h4>
+            <h4>How many you left at home?</h4>
+            <h4>How many you totally forget?</h4>
+            <p>
+                Discard let you have these cards with you at all times without adding thickness to your wallet.
+                Instead of printing out plastic or paper cards, businesses will simply create virtual loyalty card on
+                Discard.
+                Then, you can simply show your mobile screen, whenever you visit the store.
+                Businesses increase customers' convenience, loyalty and satisfaction, while reducing the cost.
+            </p>
+            <p>
+                Basically, Discard is a mobile app that replaces the need to carry membership cards.
+                It doesn't require any special hardware, just your smartphone.
+            </p>
+        </div>
+        <div class="hidden-xs col-md-5" id="details-assets">
+            <img src="assets/images/discardWebDetail.png">
+        </div>
+    </div>
 </div>
-
-<!--<div class="container-fluid">-->
-    <!--<div class="row">-->
-        <!--<img src="assets/images/cover.jpg" class="img-responsive">-->
-    <!--</div>-->
-<!--</div>-->
-<!--<div class="container">-->
-    <!--<h3>Collapsible Navbar</h3>-->
-    <!--<p>In this example, the navigation bar is hidden on small screens and replaced by a button in the top right corner (try to re-size this window).-->
-    <!--<p>Only when the button is clicked, the navigation bar will be displayed.</p>-->
-<!--</div>-->
-
 </body>
 </html>
 
