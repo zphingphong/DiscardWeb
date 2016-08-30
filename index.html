@@ -5,9 +5,41 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="libs/viewportchecker/animate.css" type="text/css" charset="utf-8"/>
+    <link rel="stylesheet" href="stylesheets/index.css" type="text/css" charset="utf-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="stylesheets/index.css" type="text/css" charset="utf-8">
+    <script src="libs/viewportchecker/viewportchecker.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#details-assets').addClass("hideme").viewportChecker({
+                classToAdd: 'visible animated bounceInRight', // Class to add to the elements when they are visible
+                offset: 100
+            });
+
+            $('.storeItem').addClass("hideme").viewportChecker({
+                classToAdd: 'visible animated swing', // Class to add to the elements when they are visible
+                offset: 100
+            });
+        });
+
+        $(document).ready(function(){
+            var scroll_start = 0;
+            var startchange = $('#details-container');
+            var offset = startchange.offset();
+            if (startchange.length){
+                $(document).scroll(function() {
+                    scroll_start = $(this).scrollTop();
+                    if(scroll_start > offset.top) {
+                        $(".navbar-inverse").css('background-color', 'rgba(0,0,0,0.7)');
+                    } else {
+                        $(".navbar-inverse").css('background-color', 'rgba(0,0,0,0.0)');
+                    }
+                });
+            }
+        });
+    </script>
 </head>
 <body>
 
@@ -42,7 +74,7 @@
 </div><!--nav-->
 <div class="container-fluid" id="discard-container">
     <div class="row">
-        <img src="assets/images/cover.jpg" class="img-responsive" style="padding-bottom: 10px"/>
+        <img src="assets/images/cover.jpg" class="img-responsive" style="padding-bottom: 10px" id="cover"/>
     </div>
     <div class="row">
         <div class="col-xs-12 col-md-7" id="details-container">
@@ -62,8 +94,380 @@
                 It doesn't require any special hardware, just your smartphone.
             </p>
         </div>
-        <div class="hidden-xs col-md-5" id="details-assets">
+        <div class="hidden-xs col-md-5 post" id="details-assets">
             <img src="assets/images/discardWebDetail.png">
+        </div>
+    </div>
+    <!--<div class="row">-->
+        <!--<div class="col-xs-12" id="how-customer-container">-->
+            <!--<div id="how-customer-slide" class="carousel slide" data-ride="carousel">-->
+                <!--<h1>How Discard works for customer?</h1>-->
+                <!--&lt;!&ndash; Indicators &ndash;&gt;-->
+                <!--<ol class="carousel-indicators">-->
+                    <!--<li data-target="#how-customer-slide" data-slide-to="0" class="active"></li>-->
+                    <!--<li data-target="#how-customer-slide" data-slide-to="1"></li>-->
+                    <!--<li data-target="#how-customer-slide" data-slide-to="2"></li>-->
+                    <!--<li data-target="#how-customer-slide" data-slide-to="3"></li>-->
+                <!--</ol>-->
+
+                <!--&lt;!&ndash; Wrapper for slides &ndash;&gt;-->
+                <!--<div class="carousel-inner" role="listbox">-->
+                    <!--<div class="item active">-->
+                        <!--<div class="row how-slide-container">-->
+                            <!--<div class="how-slide-img-container how-slide-img-left-container col-xs-12 col-md-6">-->
+                                <!--<img src="assets/images/how-to-add-store.png" alt="Add store">-->
+                            <!--</div>-->
+                            <!--<div class="how-slide-text-container col-xs-12 col-md-6">-->
+                                <!--<h3>-->
+                                    <!--Add store-->
+                                <!--</h3>-->
+                                <!--<p>-->
+                                    <!--In front of the stores, there will be a 4-digits store code.-->
+                                    <!--Simply put the code into Discard.-->
+                                    <!--The store will be added to your store list.-->
+                                    <!--Any stamp card will be automatically downloaded for you, and you can start collecting right away.-->
+                                    <!--If you are a member of the store, any special membership card will be downloaded for you as well.-->
+                                <!--</p>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--&lt;!&ndash;<div class="carousel-caption">&ndash;&gt;-->
+                        <!--&lt;!&ndash;Scan customer's QR code&ndash;&gt;-->
+                        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                    <!--</div>-->
+                    <!--<div class="item">-->
+                        <!--<div class="row how-slide-container">-->
+                            <!--<div class="how-slide-img-container how-slide-img-left-container col-xs-12 col-md-6">-->
+                                <!--<img src="assets/images/how-to-pick-store.png" alt="Pick a store">-->
+                            <!--</div>-->
+                            <!--<div class="how-slide-text-container col-xs-12 col-md-6">-->
+                                <!--<h3>-->
+                                    <!--Pick a store-->
+                                <!--</h3>-->
+                                <!--<p>-->
+                                    <!--On your visit to the store, simple pick the store from store list.-->
+                                    <!--The store screen will show your ID as a QR code, which interacts with Discard Admin app used by the store agents.-->
+                                    <!--You also can check the store and card information, such as store address and card expiry date, from this screen.-->
+                                <!--</p>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--&lt;!&ndash;<div class="carousel-caption">&ndash;&gt;-->
+                        <!--&lt;!&ndash;Validate membership expiry date&ndash;&gt;-->
+                        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                    <!--</div>-->
+                    <!--<div class="item">-->
+                        <!--<div class="row how-slide-container">-->
+                            <!--<div class="how-slide-img-container how-slide-img-left-container col-xs-12 col-md-6">-->
+                                <!--<img src="assets/images/how-to-redeem-cus.png" alt="Redeem perks">-->
+                            <!--</div>-->
+                            <!--<div class="how-slide-text-container col-xs-12 col-md-6">-->
+                                <!--<h3>-->
+                                    <!--Redeem perks-->
+                                <!--</h3>-->
+                                <!--<p>-->
+                                    <!--Show your Discard app screen to the store agent to redeem perks for member.-->
+                                    <!--If you collect enough stamps, you may also redeem the store's offer.-->
+                                    <!--Your card will be reset to blank afterward.-->
+                                <!--</p>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="item">-->
+                        <!--<div class="row how-slide-container">-->
+                            <!--<div class="how-slide-img-container how-slide-img-left-container col-xs-12 col-md-6">-->
+                                <!--<img src="assets/images/how-to-collect-stamp.png" alt="Collect stamp">-->
+                            <!--</div>-->
+                            <!--<div class="how-slide-text-container col-xs-12 col-md-6">-->
+                                <!--<h3>-->
+                                    <!--Collect stamp-->
+                                <!--</h3>-->
+                                <!--<p>-->
+                                    <!--When you meet store requirement to earn a stamp, show your screen to the store agent.-->
+                                    <!--They will stamp on your card with their device.-->
+                                    <!--The stamp shows up instantly on your phone.-->
+                                    <!--You may reference back to the app to check how many stamps you collected whenever you want.-->
+                                <!--</p>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+                <!--&lt;!&ndash; Controls &ndash;&gt;-->
+                <!--<a class="left carousel-control" href="#how-customer-slide" role="button" data-slide="prev">-->
+                    <!--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
+                    <!--<span class="sr-only">Previous</span>-->
+                <!--</a>-->
+                <!--<a class="right carousel-control" href="#how-customer-slide" role="button" data-slide="next">-->
+                    <!--<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
+                    <!--<span class="sr-only">Next</span>-->
+                <!--</a>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="row">-->
+        <!--<div class="col-xs-12" id="how-business-container">-->
+            <!--<div id="how-business-slide" class="carousel slide" data-ride="carousel">-->
+                <!--<h1>How Discard works for business?</h1>-->
+                <!--&lt;!&ndash; Indicators &ndash;&gt;-->
+                <!--<ol class="carousel-indicators">-->
+                    <!--<li data-target="#how-business-slide" data-slide-to="0" class="active"></li>-->
+                    <!--<li data-target="#how-business-slide" data-slide-to="1"></li>-->
+                    <!--<li data-target="#how-business-slide" data-slide-to="2"></li>-->
+                    <!--<li data-target="#how-business-slide" data-slide-to="3"></li>-->
+                <!--</ol>-->
+
+                <!--&lt;!&ndash; Wrapper for slides &ndash;&gt;-->
+                <!--<div class="carousel-inner" role="listbox">-->
+                    <!--<div class="item active">-->
+                        <!--<div class="row how-slide-container">-->
+                            <!--<div class="how-slide-img-container how-slide-img-right-container visible-xs-block col-xs-12">-->
+                                <!--<img src="assets/images/how-to-scan.png" alt="Scan customer's QR code">-->
+                            <!--</div>-->
+                            <!--<div class="how-slide-text-container col-xs-12 col-md-6">-->
+                                <!--<h3>-->
+                                    <!--Scan customer QR code-->
+                                <!--</h3>-->
+                                <!--<p>-->
+                                    <!--When your customer wants to redeem perk from their card, or collect more stamp, use Discard Admin app to scan-->
+                                    <!--the customer QR code. The app will show your member information, such as expiry date, number of stamps and perk.-->
+                                <!--</p>-->
+                            <!--</div>-->
+                            <!--<div class="how-slide-img-container how-slide-img-right-container hidden-xs col-md-6">-->
+                                <!--<img src="assets/images/how-to-scan.png" alt="Scan customer's QR code">-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--&lt;!&ndash;<div class="carousel-caption">&ndash;&gt;-->
+                        <!--&lt;!&ndash;Scan customer's QR code&ndash;&gt;-->
+                        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                    <!--</div>-->
+                    <!--<div class="item">-->
+                        <!--<div class="row how-slide-container">-->
+                            <!--<div class="how-slide-img-container how-slide-img-right-container visible-xs-block col-xs-12">-->
+                                <!--<img src="assets/images/how-to-verify.png" alt="Verify that membership is valid">-->
+                            <!--</div>-->
+                            <!--<div class="how-slide-text-container col-xs-12 col-md-6">-->
+                                <!--<h3>-->
+                                    <!--Verify that membership is valid-->
+                                <!--</h3>-->
+                                <!--<p>-->
+                                    <!--You can validate the expiry date on the customer's membership card like you normally would, based on the information on Discard Admin app.-->
+                                    <!--See if they're still eligible for the perk of the card holder.-->
+                                <!--</p>-->
+                            <!--</div>-->
+                            <!--<div class="how-slide-img-container how-slide-img-right-container hidden-xs col-md-6">-->
+                                <!--<img src="assets/images/how-to-verify.png" alt="Verify that membership is valid">-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--&lt;!&ndash;<div class="carousel-caption">&ndash;&gt;-->
+                        <!--&lt;!&ndash;Validate membership expiry date&ndash;&gt;-->
+                        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                    <!--</div>-->
+                    <!--<div class="item">-->
+                        <!--<div class="row how-slide-container">-->
+                            <!--<div class="how-slide-img-container how-slide-img-right-container visible-xs-block col-xs-12">-->
+                                <!--<img src="assets/images/how-to-add-stamp.png" alt="Add a stamp for customer">-->
+                            <!--</div>-->
+                            <!--<div class="how-slide-text-container col-xs-12 col-md-6">-->
+                                <!--<h3>-->
+                                    <!--Add a stamp for customer-->
+                                <!--</h3>-->
+                                <!--<p>-->
+                                    <!--When the customer meets your requirement to earn a stamp, just tap on Discard Admin app to add a stamp for them.-->
+                                    <!--Updated card with the new stamp then shows up on your customer's device for their reference.-->
+                                <!--</p>-->
+                            <!--</div>-->
+                            <!--<div class="how-slide-img-container how-slide-img-right-container hidden-xs col-md-6">-->
+                                <!--<img src="assets/images/how-to-add-stamp.png" alt="Add a stamp for customer">-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="item">-->
+                        <!--<div class="row how-slide-container">-->
+                            <!--<div class="how-slide-img-container how-slide-img-right-container visible-xs-block col-xs-12">-->
+                                <!--<img src="assets/images/how-to-redeem.png" alt="Mark the card as redeemed">-->
+                            <!--</div>-->
+                            <!--<div class="how-slide-text-container col-xs-12 col-md-6">-->
+                                <!--<h3>-->
+                                    <!--Mark the card as redeemed-->
+                                <!--</h3>-->
+                                <!--<p>-->
+                                    <!--Let's say your customer earned enough stamps to redeem any perk specified.-->
+                                    <!--On your Discard Admin app, you can mark the card that it's redeemed.-->
+                                    <!--Discard then resets the card on customer's device.-->
+                                <!--</p>-->
+                            <!--</div>-->
+                            <!--<div class="how-slide-img-container how-slide-img-right-container hidden-xs col-md-6">-->
+                                <!--<img src="assets/images/how-to-redeem.png" alt="Mark the card as redeemed">-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+                <!--&lt;!&ndash; Controls &ndash;&gt;-->
+                <!--<a class="left carousel-control" href="#how-business-slide" role="button" data-slide="prev">-->
+                    <!--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
+                    <!--<span class="sr-only">Previous</span>-->
+                <!--</a>-->
+                <!--<a class="right carousel-control" href="#how-business-slide" role="button" data-slide="next">-->
+                    <!--<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
+                    <!--<span class="sr-only">Next</span>-->
+                <!--</a>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <div class="row">
+        <div class="col-xs-12" id="features-container">
+            <!--<h1>This is what you'd get for joining us.</h1>-->
+            <h1>Our trusting clients</h1>
+            <div class="store">
+                <img class="storeItem" src="assets/images/clients/baanPloy.png" >
+                <img class="storeItem" src="assets/images/clients/beta5.png" >
+                <img class="storeItem" src="assets/images/clients/bubbleQueen.png" >
+                <img class="storeItem" src="assets/images/clients/bubbleworld.png" >
+                <img class="storeItem" src="assets/images/clients/fable.png" >
+                <img class="storeItem" src="assets/images/clients/meatbread.png" >
+                <img class="storeItem" src="assets/images/clients/nuba.png" >
+                <img class="storeItem" src="assets/images/clients/tavola.png" >
+                <img class="storeItem" src="assets/images/clients/thaiaway.png" >
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12" id="about-container">
+            <h1>Who are we?</h1>
+            <p>
+                Discard is part of Panik Systems Inc. Panik Systems was founded as a software housing, since 2010, for many of our clients all across North America.
+                One day, our executives realized that we could potentially build systems for ourselves as well. So, we founded our very own products namely,
+                O'My Recipes, GetBookin and Discard. Our tight, friendly team includes,
+            </p>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-3 profile">
+                    <img src="assets/images/zom.png" />
+                    <div class="name">Paninee Khantidhara</div>
+                    <div class="title">Chief Technology Officer</div>
+                    <div class="motto">all things technical</div>
+                    <div class="school">B.Tech <a href="http://www.bcit.ca/">@BCIT</a></div>
+                    <div class="location">Canada/Thailand</div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 profile">
+                    <img src="assets/images/nick.png" />
+                    <div class="name">Nicholas Pan</div>
+                    <div class="title">Chief Operation Officer</div>
+                    <div class="motto">team builder</div>
+                    <div class="school">B.Sc. <a href="http://www.sfu.ca/">@SFU</a></div>
+                    <div class="location">Canada/Malaysia</div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 profile">
+                    <img src="assets/images/martin.png" />
+                    <div class="name">Martin Lim</div>
+                    <div class="title">Account Manager/Business Analyst</div>
+                    <div class="motto">ask me questions</div>
+                    <div class="school">M.B.A. <a href="http://www.sfu.ca/">@SFU</a></div>
+                    <div class="location">Canada</div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 profile">
+                    <img src="assets/images/morgan.png" />
+                    <div class="name">Morgan Wynne</div>
+                    <div class="title">Software Engineer</div>
+                    <div class="motto">life coding</div>
+                    <div class="school">Dip.Tech <a href="http://www.bcit.ca/">@BCIT</a></div>
+                    <div class="location">Canada</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-3 profile">
+                    <img src="assets/images/wei.png" />
+                    <div class="name">Wei Zhang</div>
+                    <div class="title">Software Engineer</div>
+                    <div class="motto">all things logic</div>
+                    <div class="school">B.Sc. <a href="https://www.ubc.ca/">@UBC</a></div>
+                    <div class="location">Canada/China</div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 profile">
+                    <img src="assets/images/mani.png" />
+                    <div class="name">Mani Tiparthi</div>
+                    <div class="title">Customer Service/Outsource Mgr.</div>
+                    <div class="motto">brains importer</div>
+                    <div class="school">M.B.A. <a href="https://ucanwest.ca/">@UCANWEST</a></div>
+                    <div class="location">Canada/India</div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 profile">
+                    <img src="assets/images/louise.png" />
+                    <div class="name">Louise Decloux</div>
+                    <div class="title">UX/UI Designer</div>
+                    <div class="motto">ease of use</div>
+                    <div class="school">B.A. <a href="http://www.bcit.ca/">@BCIT</a></div>
+                    <div class="location">Canada</div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 profile">
+                    <img src="assets/images/bat.png" />
+                    <div class="name">Chindanai Peerapattanapaiboon</div>
+                    <div class="title">Software Engineer</div>
+                    <div class="motto">ios for life</div>
+                    <div class="school">B.Sc. <a href="http://www.te.psu.ac.th/">@PSU</a></div>
+                    <div class="location">Thailand</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-3 profile">
+                    <img src="assets/images/a.png" />
+                    <div class="name">Akasit Ngaopommin</div>
+                    <div class="title">Account Manager</div>
+                    <div class="motto">drive the market</div>
+                    <div class="school">B.B.A. <a href="http://www.rmutk.ac.th/">@UTK</a></div>
+                    <div class="location">Thailand</div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 profile">
+                    <img src="assets/images/beer.png" />
+                    <div class="name">Prapon Chaimuttayompol</div>
+                    <div class="title">Software Engineer</div>
+                    <div class="motto">nice clean code</div>
+                    <div class="school">M.IT. <a href="http://www.unimelb.edu.au/">@UMELB</a></div>
+                    <div class="location">Thailand</div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 profile">
+                    <img src="assets/images/phing.png" />
+                    <div class="name">Ornchada Jutaviriyasakul</div>
+                    <div class="title">Customer Service</div>
+                    <div class="motto">keep smiling</div>
+                    <div class="school">B.B.A. <a href="http://www.au.edu/">@AU</a></div>
+                    <div class="location">Thailand</div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 profile">
+                    <div class="name"></div>
+                    <div class="title"></div>
+                    <div class="location"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12" id="contact-container">
+            <h1>Any question? Contact us</h1>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Canada</h3>
+                    <a href="mailto:ca@discardapp.com">ca@discardapp.com</a>
+                    <p>
+                        +1 604 734 8844
+                    </p>
+                    <p>
+                        5588 Patterson Avenue, Burnaby, BC, Canada V5H 0A7
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <h3>Thailand</h3>
+                    <a href="mailto:th@discardapp.com">th@discardapp.com</a>
+                    <p>
+                        +1 6685 567 8971
+                    </p>
+                    <p>
+                        30 Ladprao-Wanghin 60, Ladprao Bangkok 10230
+                    </p>
+                    <p>
+                        Visit us on <a href="https://www.facebook.com/discardTH"><img src="assets/images/clients/facebook.png" /></a>
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
