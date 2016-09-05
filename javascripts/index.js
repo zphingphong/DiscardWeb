@@ -14,17 +14,11 @@ $(function() {
     offset: 100
   });
 
-  var scroll_start = 0;
-  var startchange = $('#details-container');
-  var offset = startchange.offset();
-  if (startchange.length){
-    $(document).scroll(function() {
-      scroll_start = $(this).scrollTop();
-      if(scroll_start > offset.top) {
-        $('.navbar-inverse').css('background-color', 'rgba(0,0,0,0.7)');
-      } else {
-        $('.navbar-inverse').css('background-color', 'rgba(0,0,0,0.0)');
-      }
-    });
-  }
+  $(document).scroll(function() {
+    if($(document).scrollTop() > 50) {
+      $('.navbar-inverse').css('background-color', 'rgba(0,0,0,0.7)');
+    } else {
+      $('.navbar-inverse').css('background-color', 'rgba(0,0,0,0.0)');
+    }
+  });
 });
