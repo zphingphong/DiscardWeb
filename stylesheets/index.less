@@ -8,61 +8,74 @@
   font-weight: normal;
   font-style: normal;
 }
+
 /***********************************************************************
 *  COMMON
 ***********************************************************************/
-.hideme {
-  opacity: 0;
+
+.hideme{
+  opacity:0;
 }
-.visible {
-  opacity: 1;
+.visible{
+  opacity:1;
 }
+
 /***********************************************************************
 *  OPAQUE NAVBAR SECTION
 ***********************************************************************/
 .opaque-navbar {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0,0,0,0.0);
   /*height: 60px;*/
   border-bottom: 0px;
-  transition: background-color 0.5s ease 0s;
+  transition: background-color .5s ease 0s;
 }
+
 .navbar-collapse {
   border-color: transparent !important;
   -webkit-box-shadow: none !important;
 }
+
 .opaque-navbar.opaque {
   background-color: black;
   height: 60px;
   transition: background-color 1s ease 0s;
 }
-.navbar-inverse .navbar-nav > li > a {
+
+.navbar-inverse .navbar-nav>li>a {
   color: white;
   font-size: 2rem;
-  -o-transition: color 0.8s ease-out;
-  -ms-transition: color 0.8s ease-out;
-  -moz-transition: color 0.8s ease-out;
-  -webkit-transition: color 0.8s ease-out;
-  transition: color 0.8s ease-out;
+  -o-transition:color .8s ease-out;
+  -ms-transition:color .8s ease-out;
+  -moz-transition:color .8s ease-out;
+  -webkit-transition:color .8s ease-out;
+
+  transition:color .8s ease-out;
 }
-.navbar-inverse .navbar-nav > li > a:hover {
+
+.navbar-inverse .navbar-nav>li>a:hover {
   color: #ff9500;
   font-size: 2rem;
-  -o-transition: color 0.8s ease-out;
-  -ms-transition: color 0.8s ease-out;
-  -moz-transition: color 0.8s ease-out;
-  -webkit-transition: color 0.8s ease-out;
-  transition: color 0.8s ease-out;
+  -o-transition:color .8s ease-out;
+  -ms-transition:color .8s ease-out;
+  -moz-transition:color .8s ease-out;
+  -webkit-transition:color .8s ease-out;
+
+  transition:color .8s ease-out;
 }
-.navbar-collapse .navbar-nav > li > a {
-  background-color: rgba(0, 0, 0, 0.7);
+
+.navbar-collapse .navbar-nav>li>a {
+  background-color: rgba(0,0,0,0.7);
 }
-.navbar-collapse .navbar-nav > li > a:hover {
-  background-color: rgba(0, 0, 0, 0.7);
+
+.navbar-collapse .navbar-nav>li>a:hover {
+  background-color: rgba(0,0,0,0.7);
 }
+
 .navbar-toggle {
   border: none;
   outline: none;
 }
+
 /***********************************************************************
 *  BODY
 ***********************************************************************/
@@ -70,21 +83,27 @@ body {
   font-family: 'brie_lightregular';
   font-size: 1rem;
 }
-#details-assets img {
-  max-width: 100%;
-  max-height: 100%;
+
+#details-assets {
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  h4 {
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 10px;
+  }
 }
-#details-assets h4 {
-  text-align: center;
-  font-weight: bold;
-  padding-bottom: 10px;
-}
+
 /***********************************************************************
 *  GENERAL
 ***********************************************************************/
+
 .content {
   padding: 0 3%;
 }
+
 /***********************************************************************
 *  COVER
 ***********************************************************************/
@@ -97,19 +116,20 @@ body {
   min-height: 100vh;
   color: white;
   text-align: center;
+  .tagline {
+    font-size: 5rem;
+    text-transform: uppercase;
+    margin: 1.5em 0;
+    text-shadow: 1px 0 5vh hsla(0,0%,100%,.6);
+  }
+  .logo {
+    margin-top: 120px;
+    img{
+      border-radius: 10%;
+    }
+  }
 }
-#cover .tagline {
-  font-size: 5rem;
-  text-transform: uppercase;
-  margin: 1.5em 0;
-  text-shadow: 1px 0 5vh rgba(255, 255, 255, 0.6);
-}
-#cover .logo {
-  margin-top: 120px;
-}
-#cover .logo img {
-  border-radius: 10%;
-}
+
 /***********************************************************************
 *  CLIENTS
 ***********************************************************************/
@@ -118,9 +138,10 @@ body {
   border-radius: 50%;
   padding: 20px;
 }
+
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   #clients-container .store img {
     width: 120px;
   }
-}
+  }
