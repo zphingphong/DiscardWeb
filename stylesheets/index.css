@@ -44,23 +44,23 @@
 .navbar-inverse .navbar-nav>li>a {
     color: white;
     font-size: 2rem;
-    -o-transition:color .2s ease-out;
-    -ms-transition:color .2s ease-out;
-    -moz-transition:color .2s ease-out;
-    -webkit-transition:color .2s ease-out;
+    -o-transition:color .8s ease-out;
+    -ms-transition:color .8s ease-out;
+    -moz-transition:color .8s ease-out;
+    -webkit-transition:color .8s ease-out;
 
-    transition:color .2s ease-out;
+    transition:color .8s ease-out;
 }
 
 .navbar-inverse .navbar-nav>li>a:hover {
     color: #ff9500;
     font-size: 2rem;
-    -o-transition:color .2s ease-out;
-    -ms-transition:color .2s ease-out;
-    -moz-transition:color .2s ease-out;
-    -webkit-transition:color .2s ease-out;
+    -o-transition:color .8s ease-out;
+    -ms-transition:color .8s ease-out;
+    -moz-transition:color .8s ease-out;
+    -webkit-transition:color .8s ease-out;
 
-    transition:color .2s ease-out;
+    transition:color .8s ease-out;
 }
 
 .navbar-collapse .navbar-nav>li>a {
@@ -105,4 +105,9 @@ body #features-container .store img {
     body #features-container .store img {
         width: 120px;
     }
+}
+
+#cover {
+    background-image: url('assets/images/cover.jpg');
+    
 }
