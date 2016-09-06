@@ -15,8 +15,7 @@
 *  OPAQUE NAVBAR SECTION
 ***********************************************************************/
 .opaque-navbar {
-  background-color: rgba(0, 0, 0, 0);
-  /*height: 60px;*/
+  background: none;
   border-bottom: 0px;
   transition: background-color 0.5s ease 0s;
 }
@@ -39,6 +38,10 @@
   transition: color 0.8s ease-out;
 }
 .navbar-inverse .navbar-nav > li > a:hover {
+  color: #ff9500;
+}
+.navbar-inverse .navbar-nav .active a {
+  background: none;
   color: #ff9500;
 }
 .navbar-collapse .navbar-nav > li > a {
