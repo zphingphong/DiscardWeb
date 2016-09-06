@@ -18,24 +18,30 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="libs/jquery.easing.min.js"></script>
     <script src="https://use.fontawesome.com/ee471863ae.js"></script>
     <script src="libs/viewportchecker/viewportchecker.js"></script>
     <script src="libs/smartbanner/jquery.smartbanner.js"></script>
     <script src="javascripts/index.js"></script>
 </head>
-<body>
+<body data-spy="scroll" data-offset="50" data-target=".discard-navbar">
 <div class="navbar navbar-inverse navbar-fixed-top opaque-navbar">
     <div class="container">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navCollapse">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#discard-nav-collapse">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
+            <div class="visible-xs navbar-toggle pull-left">
+                <a href="https://www.facebook.com/discardTH">
+                    <i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i>
+                </a>
+            </div>
         </div>
-        <div id="navMain">
+        <div class="discard-navbar">
             <ul class="hidden-xs nav navbar-nav pull-left">
-                <li><a href="#">Features</a></li>
+                <li><a href="#features-container">Features</a></li>
                 <li><a href="#">Pricing</a></li>
                 <li><a href="#">Clients</a></li>
                 <li><a href="#">About Us</a></li>
@@ -49,9 +55,9 @@
                 </li>
             </ul>
         </div>
-        <div class="collapse navbar-collapse" id="navCollapse">
+        <div class="discard-navbar collapse navbar-collapse" id="discard-nav-collapse">
             <ul class="visible-xs nav navbar-nav pull-right">
-                <li><a href="#">Features</a></li>
+                <li><a href="#features-container">Features</a></li>
                 <li><a href="#">Pricing</a></li>
                 <li><a href="#">Clients</a></li>
                 <li><a href="#">About Us</a></li>
@@ -73,13 +79,16 @@
             </h3>
         </div>
     </div>
-    <div class="row " id="feature-membership-container">
-        <div class="content">
-            <div class="col-xs-12 col-sm-6">
-                <h4>Membership</h4>
-            </div>
-            <div class="col-xs-12 col-sm-6">
-                <img class="feature-img" src="assets/images/feature-membership.png" />
+    <div class="container-fluid" id="features-container">
+        <div class="row features" id="feature-membership-container">
+            <div class="container-fluid content">
+                <div class="col-xs-12 col-sm-6">
+                    <h4>Membership</h4>
+                    <p class="feature-desc">Make your customer feel special. Create, search and manage your members at your fingertips. Members can signup themselves by downloading the app or you can add them manually. You also have a choice to search and validate the members by scanning their unique QR code or search for them by email or phone number. So, whether you own a brick and mortar, delivery or online virtual business, Discard serves all purposes.</p>
+                </div>
+                <div class="col-xs-12 col-sm-6 text-center">
+                    <img class="feature-img" src="assets/images/feature-membership.png" />
+                </div>
             </div>
         </div>
     </div>
@@ -100,7 +109,7 @@
             </div>
         </div>
     </div>
-</div>
+</div class="container-fluid">
 <div id="footer-container">
     Copyright © 2016 Panik Systems Inc. All rights reserved.
 </div>
