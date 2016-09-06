@@ -44,6 +44,16 @@
   background: none;
   color: #ff9500;
 }
+.navbar-inverse .active a {
+  background: none;
+  color: #ff9500;
+}
+.navbar-inverse .active a:hover,
+.navbar-inverse .active a:active,
+.navbar-inverse .active a:focus {
+  background: none !important;
+  color: #ff9500;
+}
 .navbar-collapse .navbar-nav > li > a {
   background-color: rgba(0, 0, 0, 0.7);
 }
