@@ -137,6 +137,11 @@ body .hideme {
 body .visible {
   opacity: 1;
 }
+body .brown-opaque-bg {
+  background-color: rgba(101, 48, 0, 0.7);
+  padding: 30px 3%;
+  border-radius: 20px;
+}
 /***********************************************************************
 *  COVER
 ***********************************************************************/
@@ -172,6 +177,9 @@ body .visible {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
+}
+#pricing-container ul {
+  padding: 0;
 }
 /***********************************************************************
 *  CLIENTS

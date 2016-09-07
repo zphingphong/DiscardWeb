@@ -20,6 +20,7 @@
 ***********************************************************************/
 @orange-color: #ff9500;
 @opaque-black-color: rgba(0, 0, 0, 0.7);
+@opaque-brown-color: rgba(101, 48, 0, 0.7);
 
 /***********************************************************************
 *  NAV
@@ -154,8 +155,15 @@ body {
   .hideme {
     opacity: 0;
   }
+
   .visible {
     opacity: 1;
+  }
+
+  .brown-opaque-bg {
+    background-color: @opaque-brown-color;
+    padding: 30px 3%;
+    border-radius: 20px;
   }
 }
 
@@ -195,6 +203,9 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
+  ul {
+    padding: 0;
+  }
 }
 
 /***********************************************************************
