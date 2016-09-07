@@ -12,7 +12,7 @@
 *  VARIABLES
 ***********************************************************************/
 /***********************************************************************
-*  OPAQUE NAVBAR SECTION
+*  NAV
 ***********************************************************************/
 .opaque-navbar {
   background: none;
@@ -54,11 +54,17 @@
   background: none !important;
   color: #ff9500;
 }
-.navbar-collapse .navbar-nav > li > a {
+.navbar-collapse .navbar-nav > li {
   background-color: rgba(0, 0, 0, 0.7);
 }
-.navbar-collapse .navbar-nav > li > a:hover {
+.navbar-collapse .navbar-nav > li:hover,
+.navbar-collapse .navbar-nav > li:active,
+.navbar-collapse .navbar-nav > li:focus {
   background-color: rgba(0, 0, 0, 0.7);
+}
+#discard-nav-collapse {
+  position: absolute;
+  right: 0;
 }
 .navbar-toggle {
   border: none;

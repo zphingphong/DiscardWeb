@@ -16,7 +16,7 @@
 @opaque-black-color: rgba(0, 0, 0, 0.7);
 
 /***********************************************************************
-*  OPAQUE NAVBAR SECTION
+*  NAV
 ***********************************************************************/
 .opaque-navbar {
   background: none;
@@ -69,12 +69,17 @@
 }
 
 .navbar-collapse {
-  .navbar-nav>li>a {
+  .navbar-nav>li {
     background-color: @opaque-black-color;
-    &:hover {
+    &:hover, &:active, &:focus {
       background-color: rgba(0,0,0,0.7);
     }
   }
+}
+
+#discard-nav-collapse {
+  position: absolute;
+  right: 0;
 }
 
 .navbar-toggle {
