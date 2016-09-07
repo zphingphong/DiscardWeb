@@ -5,8 +5,15 @@ $(function() {
   $.smartbanner({ daysHidden: 0, daysReminder: 0, title:'Discard' });
 
   $('.store-item').addClass('hideme').viewportChecker({
-    classToAdd: 'visible animated pulse', // Class to add to the elements when they are visible
-    offset: 100
+    classToAdd: 'visible animated pulse'
+  });
+
+  $('#feature-membership-container, #feature-reports-container').addClass('hideme').viewportChecker({
+    classToAdd: 'visible animated bounceInRight'
+  });
+
+  $('#feature-rewards-container, #feature-communication-container').addClass('hideme').viewportChecker({
+    classToAdd: 'visible animated bounceInLeft'
   });
 
   $(document).scroll(function() {
