@@ -4,13 +4,8 @@
 $(function() {
   $.smartbanner({ daysHidden: 0, daysReminder: 0, title:'Discard' });
 
-  $('#details-assets').addClass('hideme').viewportChecker({
-    classToAdd: 'visible animated bounceInRight', // Class to add to the elements when they are visible
-    offset: 100
-  });
-
-  $('.storeItem').addClass('hideme').viewportChecker({
-    classToAdd: 'visible animated swing', // Class to add to the elements when they are visible
+  $('.store-item').addClass('hideme').viewportChecker({
+    classToAdd: 'visible animated pulse', // Class to add to the elements when they are visible
     offset: 100
   });
 
