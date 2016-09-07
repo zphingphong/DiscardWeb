@@ -137,9 +137,11 @@ body .hideme {
 body .visible {
   opacity: 1;
 }
-body .brown-opaque-bg {
-  background-color: rgba(101, 48, 0, 0.7);
+body .black-opaque-bg {
+  background-color: rgba(0, 0, 0, 0.7);
   padding: 30px 3%;
+  margin-left: 3%;
+  margin-right: 3%;
   border-radius: 20px;
 }
 /***********************************************************************
