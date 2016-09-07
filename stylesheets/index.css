@@ -8,6 +8,12 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'bangna-new';
+  src: url('../assets/fonts/bangna-new-webfont.woff2') format('woff2'), url('../assets/fonts/bangna-new-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 /***********************************************************************
 *  VARIABLES
 ***********************************************************************/
@@ -97,10 +103,13 @@
 *  GENERAL
 ***********************************************************************/
 body {
-  font-family: 'brie_lightregular';
+  font-family: 'bangna-new', 'brie_lightregular';
   font-size: 2rem;
   color: white;
   background-image: url('../assets/images/bg.png');
+}
+body h1 {
+  text-align: center;
 }
 body h3 {
   font-size: 3rem;
@@ -138,7 +147,6 @@ body .visible {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
-  color: white;
   text-align: center;
 }
 #cover .tagline {
@@ -153,6 +161,17 @@ body .visible {
 }
 #cover .logo img {
   border-radius: 10%;
+}
+/***********************************************************************
+*  PRICING
+***********************************************************************/
+#pricing-container {
+  background-image: url('../assets/images/cover2.jpg');
+  background-attachment: fixed;
+  background-position: center 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
 }
 /***********************************************************************
 *  CLIENTS
