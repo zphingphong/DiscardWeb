@@ -16,6 +16,10 @@ $(function() {
     classToAdd: 'visible animated bounceInLeft'
   });
 
+  //$('#pricing-container .package-container').addClass('hideme').viewportChecker({
+  //  classToAdd: 'visible animated bounceIn'
+  //});
+
   $(document).scroll(function() {
     if($(document).scrollTop() > 50) {
       $('.navbar-inverse').css('background-color', 'rgba(0,0,0,0.7)');

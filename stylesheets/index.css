@@ -138,10 +138,8 @@ body .visible {
   opacity: 1;
 }
 body .black-opaque-bg {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);
   padding: 30px 3%;
-  margin-left: 3%;
-  margin-right: 3%;
   border-radius: 20px;
 }
 /***********************************************************************
@@ -183,9 +181,27 @@ body .black-opaque-bg {
 #pricing-container ul {
   padding: 0;
 }
+#pricing-container .packages-container {
+  padding-left: 2%;
+  padding-right: 2%;
+}
+#pricing-container .package-container {
+  position: relative;
+  padding: 40px 50px;
+  margin-top: 10px;
+}
+#pricing-container .package-container .price {
+  color: #ff9500;
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+}
 /***********************************************************************
 *  CLIENTS
 ***********************************************************************/
+#clients-container {
+  background-color: black;
+}
 #clients-container .store img {
   width: 150px;
   border-radius: 50%;

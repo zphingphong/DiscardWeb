@@ -20,6 +20,7 @@
 ***********************************************************************/
 @orange-color: #ff9500;
 @opaque-black-color: rgba(0, 0, 0, 0.7);
+@opaque-darker-black-color: rgba(0, 0, 0, 0.8);
 @opaque-brown-color: rgba(101, 48, 0, 0.7);
 
 /***********************************************************************
@@ -161,10 +162,8 @@ body {
   }
 
   .black-opaque-bg {
-    background-color: @opaque-black-color;
+    background-color: @opaque-darker-black-color;
     padding: 30px 3%;
-    margin-left: 3%;
-    margin-right: 3%;
     border-radius: 20px;
   }
 }
@@ -208,15 +207,33 @@ body {
   ul {
     padding: 0;
   }
+  .packages-container {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  .package-container {
+    position: relative;
+    padding: 40px 50px;
+    margin-top: 10px;
+    .price {
+      color: @orange-color;
+      position: absolute;
+      bottom: 0;
+      right: 10px;
+    }
+  }
 }
 
 /***********************************************************************
 *  CLIENTS
 ***********************************************************************/
-#clients-container .store img {
-  width: 150px;
-  border-radius: 50%;
-  padding: 20px;
+#clients-container {
+  background-color: black;
+  .store img {
+    width: 150px;
+    border-radius: 50%;
+    padding: 20px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
