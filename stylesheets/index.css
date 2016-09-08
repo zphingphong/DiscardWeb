@@ -212,16 +212,17 @@ body .black-opaque-bg {
 ***********************************************************************/
 #clients-container {
   background-color: black;
+  text-align: center;
 }
 #clients-container .store img {
   width: 150px;
   border-radius: 50%;
-  padding: 20px;
+  padding: 1%;
 }
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   #clients-container .store img {
-    width: 120px;
+    width: 100px;
   }
 }
 /***********************************************************************
