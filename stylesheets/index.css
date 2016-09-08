@@ -246,6 +246,101 @@ body .black-opaque-bg {
   height: 210px;
 }
 /***********************************************************************
+*  ABOUT
+***********************************************************************/
+#about-container {
+  background-color: #ff9500;
+  padding: 40px 0;
+}
+#about-container p {
+  text-align: center;
+  color: #ffffff;
+  margin: 30px 0;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+#about-container a {
+  font-style: italic;
+  color: #653000;
+}
+#about-container #profiles-container {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+#about-container #profiles-container div.profile {
+  width: 240px;
+  float: left;
+  text-align: center;
+}
+#about-container #profiles-container div.profile img {
+  height: 180px;
+  margin: 10px auto;
+  display: block;
+  border-radius: 50%;
+}
+#about-container #profiles-container div.profile div {
+  color: white;
+}
+#about-container #profiles-container div.profile div.name {
+  font-weight: bold;
+  color: #653000;
+}
+#about-container #profiles-container div.profile div.title {
+  font-size: 1.5rem;
+}
+#about-container #profiles-container div.profile div.motto:before,
+#about-container #profiles-container div.profile div.motto:after {
+  content: '"';
+}
+#about-container #profiles-container div.profile div.school {
+  font-size: 1.8rem;
+}
+#about-container #profiles-container div.profile div.location {
+  font-weight: bold;
+}
+@media screen and (min-width: 768px) {
+  #about-container form {
+    padding: 0 5%;
+  }
+  #about-container form .row {
+    margin: 5px 0;
+  }
+}
+#about-container form .row input,
+#about-container form .row select {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: solid 2px #de8200;
+  color: #ffffff;
+}
+#about-container form .row .required-field {
+  color: #653000;
+}
+#about-container form span,
+#about-container form h6 {
+  color: #ffffff;
+}
+#about-container form h4 {
+  color: #653000;
+}
+#about-container form #signup-submit-container {
+  text-align: center;
+  padding: 3rem 0 1rem 0;
+}
+#about-container form #signup-submit-container input[type="submit"] {
+  width: 80%;
+  background: none;
+  border: solid 2px #ffffff;
+  color: #ffffff;
+  font-size: 3rem;
+  font-weight: bold;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+/***********************************************************************
 *  FOOTER
 ***********************************************************************/
 #footer-container {

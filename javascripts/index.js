@@ -47,4 +47,25 @@ $(function() {
     }
   });
 
+  function profilesCarousel(){
+
+    var carousel = $('#profiles');
+    var carouselItem = carousel.children();
+    var carouselAnimation = 5000;
+    var carouselItemWidth = carouselItem.innerWidth();
+
+    function carouselWidth(){
+      carousel.width(carouselItemWidth * carouselItem.length);
+    }
+    carouselWidth();
+
+    function loop(){
+      $(carousel).stop().animate({'margin-left': -240}, carouselAnimation, 'linear', function(){
+        $(this).css({'margin-left': 0}).find('div.profile:last').after($('div.profile:first', this));
+        loop();
+      });
+    }
+    loop();
+  }
+  profilesCarousel();
 });
