@@ -2,7 +2,7 @@
  * Created by z on 2016-09-05.
  */
 $(function() {
-  $.smartbanner({ daysHidden: 0, daysReminder: 0, title:'Discard' });
+  $.smartbanner({ daysHidden: 0, daysReminder: 0, title:'Discard', hideOnInstall: false, layer: true });
 
   $('.store-item').addClass('hideme').viewportChecker({
     classToAdd: 'visible animated pulse'

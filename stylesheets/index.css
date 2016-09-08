@@ -175,6 +175,11 @@ body .black-opaque-bg {
 #cover .logo img {
   border-radius: 10%;
 }
+@media only screen and (max-width: 768px) {
+  #cover .logo {
+    margin-top: 40px;
+  }
+}
 /***********************************************************************
 *  PRICING
 ***********************************************************************/
