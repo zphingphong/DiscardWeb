@@ -108,6 +108,14 @@ body {
   color: white;
   background-image: url('../assets/images/bg.png');
 }
+body a {
+  color: white;
+}
+body a:hover,
+body a:active,
+body a:focus {
+  color: white;
+}
 body h1 {
   text-align: center;
 }
@@ -178,6 +186,9 @@ body .black-opaque-bg {
   background-size: cover;
   min-height: 100vh;
 }
+#pricing-container h3 {
+  color: #ff9500;
+}
 #pricing-container ul {
   padding: 0;
 }
@@ -218,6 +229,21 @@ body .black-opaque-bg {
 ***********************************************************************/
 .features .feature-desc {
   line-height: 3rem;
+}
+/***********************************************************************
+*  CONTACT
+***********************************************************************/
+#contact-container {
+  padding: 40px 3%;
+}
+#contact-container .row {
+  padding: 10px 0;
+}
+#contact-container #map-th {
+  height: 260px;
+}
+#contact-container #map-ca {
+  height: 210px;
 }
 /***********************************************************************
 *  FOOTER

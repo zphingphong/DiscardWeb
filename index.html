@@ -25,174 +25,242 @@
     <script src="javascripts/index.js"></script>
 </head>
 <body data-spy="scroll" data-offset="50" data-target=".discard-navbar">
-<div class="navbar navbar-inverse navbar-fixed-top opaque-navbar">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#discard-nav-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <div class="visible-xs navbar-toggle pull-left">
-                <a href="https://www.facebook.com/discardTH">
-                    <i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i>
-                </a>
-            </div>
-        </div>
-        <div class="discard-navbar">
-            <ul class="hidden-xs nav navbar-nav pull-left">
-                <li><a href="#features-container">Features</a></li>
-                <li><a href="#pricing-container">Pricing</a></li>
-                <li><a href="#clients-container">Clients</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-            <ul class="hidden-xs nav navbar-nav pull-right">
-                <li>
+    <script>
+        function initMap() {
+            var thMapDiv = document.getElementById('map-th');
+            var thMap = new google.maps.Map(thMapDiv, {
+                center: {lat: 13.821927, lng: 100.592184},
+                zoom: 16
+            });
+            var thMarker = new google.maps.Marker({
+                position: {lat: 13.821927, lng: 100.592184},
+                map: thMap
+            });
+
+            var caMapDiv = document.getElementById('map-ca');
+            var caMap = new google.maps.Map(caMapDiv, {
+                center: {lat: 49.234681, lng: -123.013417},
+                zoom: 16
+            });
+            var caMarker = new google.maps.Marker({
+                position: {lat: 49.234681, lng: -123.013417},
+                map: caMap
+            });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKIx7wtr8B_LjHKynGlrIi5wiNRQd5suA&callback=initMap">
+    </script>
+    <div class="navbar navbar-inverse navbar-fixed-top opaque-navbar">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#discard-nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="visible-xs navbar-toggle pull-left">
                     <a href="https://www.facebook.com/discardTH">
                         <i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i>
                     </a>
-                </li>
-            </ul>
-        </div>
-        <div class="discard-navbar collapse navbar-collapse" id="discard-nav-collapse">
-            <ul class="visible-xs nav navbar-nav pull-right">
-                <li><a href="#features-container">Features</a></li>
-                <li><a href="#pricing-container">Pricing</a></li>
-                <li><a href="#clients-container">Clients</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </div>
-    </div>
-</div><!--nav-->
-<div class="container-fluid" id="discard-container">
-    <div class="row" id="cover">
-        <div class="content">
-            <div class="logo">
-                <img src="assets/images/logo.png" />
-            </div>
-            <h1 class="tagline">Keep Your Customers Coming Back</h1>
-            <h3>
-                Membership system has never been so simple. <br/>
-                Discard let businesses create and manage members right from your smartphone. Highly customizable to serve all purposes. Get to know your customers better without adding thickness to their wallet. No extra hardware required.
-            </h3>
-        </div>
-    </div>
-    <div class="container-fluid" id="features-container">
-        <div class="row features" id="feature-membership-container">
-            <div class="container-fluid content">
-                <div class="col-xs-12 col-sm-6">
-                    <h4>Membership</h4>
-                    <p class="feature-desc">Make your customer feel special. Create, search and manage your members at your fingertips. Members can signup themselves by downloading the app or you can add them manually. You also have a choice to search and validate the members by scanning their unique QR code or search for them by email or phone number. So, whether you own a brick and mortar, delivery or online virtual business, Discard serves all purposes.</p>
-                </div>
-                <div class="col-xs-12 col-sm-6 text-center">
-                    <img class="feature-img" src="assets/images/feature-membership.png" />
                 </div>
             </div>
-        </div>
-        <div class="row features" id="feature-rewards-container">
-            <div class="container-fluid content">
-                <div class="col-xs-12 col-sm-6 text-center">
-                    <img class="feature-img" src="assets/images/feature-rewards.png" />
-                </div>
-                <div class="col-xs-12 col-sm-6">
-                    <h4>Rewards</h4>
-                    <p class="feature-desc">With our stamp collection systems, you can setup a rewards campaign to keep your customers coming back for more. Using a simple single tap on your device, you can give out stamps and give away the rewards, while your customers get real-time update on their device. Our stamps are customizable, just like you make your own physical rubber stamp; meaning you can be unique, making your customers remember the experience.</p>
-                </div>
+            <div class="discard-navbar">
+                <ul class="hidden-xs nav navbar-nav pull-left">
+                    <li><a href="#features-container">Features</a></li>
+                    <li><a href="#pricing-container">Pricing</a></li>
+                    <li><a href="#clients-container">Clients</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#contact-container">Contact</a></li>
+                </ul>
+                <ul class="hidden-xs nav navbar-nav pull-right">
+                    <li>
+                        <a href="https://www.facebook.com/discardTH">
+                            <i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="discard-navbar collapse navbar-collapse" id="discard-nav-collapse">
+                <ul class="visible-xs nav navbar-nav pull-right">
+                    <li><a href="#features-container">Features</a></li>
+                    <li><a href="#pricing-container">Pricing</a></li>
+                    <li><a href="#clients-container">Clients</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#contact-container">Contact</a></li>
+                </ul>
             </div>
         </div>
-        <div class="row features" id="feature-reports-container">
-            <div class="container-fluid content">
-                <div class="col-xs-12 col-sm-6">
-                    <h4>Reports</h4>
-                    <p class="feature-desc">Get to know your customers, where they live, what they like, how often they visit you and much more. Our report is detailed enough to tell how your customers response to the promotion you have going. We track their usage of their membership cards automatically. These data stops you from blindly create and change your promotional campaign, and guess for the outcome. You know exactly what happened.</p>
+    </div><!--nav-->
+    <div class="container-fluid" id="discard-container">
+        <div class="row" id="cover">
+            <div class="content">
+                <div class="logo">
+                    <img src="assets/images/logo.png" />
                 </div>
-                <div class="col-xs-12 col-sm-6 text-center">
-                    <img class="feature-img" src="assets/images/feature-reports.png" />
-                </div>
+                <h1 class="tagline">Keep Your Customers Coming Back</h1>
+                <h3>
+                    Membership system has never been so simple. <br/>
+                    Discard let businesses create and manage members right from your smartphone. Highly customizable to serve all purposes. Get to know your customers better without adding thickness to their wallet. No extra hardware required.
+                </h3>
             </div>
         </div>
-        <div class="row features" id="feature-communication-container">
-            <div class="container-fluid content">
-                <div class="col-xs-12 col-sm-6 text-center">
-                    <img class="feature-img" src="assets/images/feature-communication.png" />
-                </div>
-                <div class="col-xs-12 col-sm-6">
-                    <h4>Communication</h4>
-                    <p class="feature-desc">Discard automatically sends customizable welcome message to new members. Let them know when they collect rewards, earn stamps or redeem discount. We help prevent your customers from forgetting about you by calling them back when they are away for a while. Alert them to renew their membership status once their membership and/or rewards is about to expire. Other than these auto-notifications, you can manually send them messages from store admin system. We also collect your members’ contact information, which you then can use to communicate with them using other means such as Facebook, email and phone call.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row" id="pricing-container">
-        <div class="container-fluid content">
-            <h1>Packages & Pricing</h1>
-            <div class="row packages-container" id="pricing-basic-container">
-                <div class="col-xs-12">
-                    <div class="black-opaque-bg package-container">
-                        <ul>
-                            <li>Unlimited number of members and cards</li>
-                            <li>Unlimited queries using QR scanner or profile search</li>
-                            <li>Real-time update on all actions: new member, stamp, collect reward, etc.</li>
-                            <li>Customizable customer auto-notifications: welcome, 1 month and 2 months no-show, 1 week, 3 days and 1 day before card expiry, rewards redemption</li>
-                            <li>Unlimited manual messages to members anytime from store admin system</li>
-                            <li>24/7 access to real-time report data with graphs and charts</li>
-                            <li>24/7 access to members' profile and contact information</li>
-                            <li>Sign in with Facebook, Google+, LINE or phone number</li>
-                            <li>Featured on Discard with address, Facebook, email, phone number, location and logo</li>
-                            <li>Single customizable promotion template including stamp and rewards icon, perks, conditions, expiry date, member history timeline statements and whether or not to automatically add the card to user</li>
-                            <li>Single owner/admin account license</li>
-                            <li>One in-person training session</li>
-                            <li>Unlimited 4x6 table stands or A4 counter stands to tell your customers about your promotion</li>
-                            <li>One roll up or j-flag to advertise your membership offer</li>
-                            <li>iOS and Android supported</li>
-                        </ul>
-                        <div class="price">&#3647;500/month</div>
+        <div class="container-fluid" id="features-container">
+            <div class="row features" id="feature-membership-container">
+                <div class="container-fluid content">
+                    <div class="col-xs-12 col-sm-6">
+                        <h4>Membership</h4>
+                        <p class="feature-desc">Make your customer feel special. Create, search and manage your members at your fingertips. Members can signup themselves by downloading the app or you can add them manually. You also have a choice to search and validate the members by scanning their unique QR code or search for them by email or phone number. So, whether you own a brick and mortar, delivery or online virtual business, Discard serves all purposes.</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 text-center">
+                        <img class="feature-img" src="assets/images/feature-membership.png" />
                     </div>
                 </div>
             </div>
-            <div class="row packages-container" id="pricing-promos-container">
-                <div class="col-xs-12 col-sm-6">
-                    <div class="black-opaque-bg package-container">
-                        <ul>
-                            <li></li>
-                        </ul>
-                        <div class="price">&#3647;500/month</div>
+            <div class="row features" id="feature-rewards-container">
+                <div class="container-fluid content">
+                    <div class="col-xs-12 col-sm-6 text-center">
+                        <img class="feature-img" src="assets/images/feature-rewards.png" />
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <h4>Rewards</h4>
+                        <p class="feature-desc">With our stamp collection systems, you can setup a rewards campaign to keep your customers coming back for more. Using a simple single tap on your device, you can give out stamps and give away the rewards, while your customers get real-time update on their device. Our stamps are customizable, just like you make your own physical rubber stamp; meaning you can be unique, making your customers remember the experience.</p>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-6">
-                    <div class="black-opaque-bg package-container">
-                        <ul>
-                            <li></li>
-                        </ul>
-                        <div class="price">&#3647;500/month</div>
+            </div>
+            <div class="row features" id="feature-reports-container">
+                <div class="container-fluid content">
+                    <div class="col-xs-12 col-sm-6">
+                        <h4>Reports</h4>
+                        <p class="feature-desc">Get to know your customers, where they live, what they like, how often they visit you and much more. Our report is detailed enough to tell how your customers response to the promotion you have going. We track their usage of their membership cards automatically. These data stops you from blindly create and change your promotional campaign, and guess for the outcome. You know exactly what happened.</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 text-center">
+                        <img class="feature-img" src="assets/images/feature-reports.png" />
+                    </div>
+                </div>
+            </div>
+            <div class="row features" id="feature-communication-container">
+                <div class="container-fluid content">
+                    <div class="col-xs-12 col-sm-6 text-center">
+                        <img class="feature-img" src="assets/images/feature-communication.png" />
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <h4>Communication</h4>
+                        <p class="feature-desc">Discard automatically sends customizable welcome message to new members. Let them know when they collect rewards, earn stamps or redeem discount. We help prevent your customers from forgetting about you by calling them back when they are away for a while. Alert them to renew their membership status once their membership and/or rewards is about to expire. Other than these auto-notifications, you can manually send them messages from store admin system. We also collect your members’ contact information, which you then can use to communicate with them using other means such as Facebook, email and phone call.</p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row" id="clients-container">
-        <div class="col-xs-12 content">
-            <!--<h1>This is what you'd get for joining us.</h1>-->
-            <h1><span class="hidden-xs">Our Trusting </span>Clients</h1>
-            <div class="store">
-                <img class="store-item" src="assets/images/clients/baanPloy.png">
-                <img class="store-item" src="assets/images/clients/sainom.png">
-                <img class="store-item" src="assets/images/clients/beta5.png">
-                <img class="store-item" src="assets/images/clients/bubbleworld.png">
-                <img class="store-item" src="assets/images/clients/fable.png">
-                <img class="store-item" src="assets/images/clients/meatbread.png">
-                <img class="store-item" src="assets/images/clients/nuba.png">
-                <img class="store-item" src="assets/images/clients/tavola.png">
-                <img class="store-item" src="assets/images/clients/thaiaway.png">
+        <div class="row" id="pricing-container">
+            <div class="container-fluid content">
+                <h1>Packages & Pricing</h1>
+                <div class="row packages-container" id="pricing-basic-container">
+                    <div class="col-xs-12">
+                        <div class="black-opaque-bg package-container">
+                            <h4>Discard Basic</h4>
+                            <ul>
+                                <li>Unlimited number of members and cards</li>
+                                <li>Unlimited queries using QR scanner or profile search</li>
+                                <li>Real-time update on all actions: new member, stamp, collect reward, etc.</li>
+                                <li>Customizable customer auto-notifications: welcome, 1 month and 2 months no-show, 1 week, 3 days and 1 day before card expiry, rewards redemption</li>
+                                <li>Unlimited manual messages to members anytime from store admin system</li>
+                                <li>24/7 access to real-time report data with graphs and charts</li>
+                                <li>24/7 access to members' profile and contact information</li>
+                                <li>Sign in with Facebook, Google+, LINE or phone number</li>
+                                <li>Featured on Discard with address, Facebook, email, phone number, location and logo</li>
+                                <li>Single customizable promotion template including stamp and rewards icon, perks, conditions, expiry date, member history timeline statements and whether or not to automatically add the card to user</li>
+                                <li>Single owner/admin account license</li>
+                                <li>One in-person training session</li>
+                                <li>Unlimited 4x6 table stands or A4 counter stands to tell your customers about your promotion</li>
+                                <li>One roll up or j-flag to advertise your membership offer</li>
+                                <li>iOS and Android supported</li>
+                            </ul>
+                            <div class="price">&#3647;500/month</div>
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="row packages-container" id="pricing-promos-container">-->
+                    <!--<div class="col-xs-12 col-sm-6">-->
+                        <!--<div class="black-opaque-bg package-container">-->
+                            <!--<h4>Promos</h4>-->
+                            <!--<ul>-->
+                                <!--<li></li>-->
+                            <!--</ul>-->
+                            <!--<div class="price">&#3647;0.30/audience</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="col-xs-12 col-sm-6">-->
+                        <!--<div class="black-opaque-bg package-container">-->
+                            <!--<ul>-->
+                                <!--<li></li>-->
+                            <!--</ul>-->
+                            <!--<div class="price">&#3647;500/month</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            </div>
+        </div>
+        <div class="row" id="clients-container">
+            <div class="col-xs-12 content">
+                <!--<h1>This is what you'd get for joining us.</h1>-->
+                <h1><span class="hidden-xs">Our Trusting </span>Clients</h1>
+                <div class="store">
+                    <img class="store-item" src="assets/images/clients/baanPloy.png">
+                    <img class="store-item" src="assets/images/clients/sainom.png">
+                    <img class="store-item" src="assets/images/clients/beta5.png">
+                    <img class="store-item" src="assets/images/clients/bubbleworld.png">
+                    <img class="store-item" src="assets/images/clients/fable.png">
+                    <img class="store-item" src="assets/images/clients/meatbread.png">
+                    <img class="store-item" src="assets/images/clients/nuba.png">
+                    <img class="store-item" src="assets/images/clients/tavola.png">
+                    <img class="store-item" src="assets/images/clients/thaiaway.png">
+                </div>
+            </div>
+        </div>
+        <div class="row" id="contact-container">
+            <div class="col-xs-12">
+                <h1>Contact</h1>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4>Thailand</h4>
+                        <p><a href="mailto:th@discardapp.com">th@discardapp.com</a></p>
+                        <p>
+                            +66 88 797 8954
+                        </p>
+                        <p>
+                            30 Ladprao-Wanghin 60, Ladprao Bangkok 10230
+                        </p>
+                        <p>
+                            Visit us on
+                            <a href="https://www.facebook.com/discardTH">
+                                <i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i>
+                            </a>
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <div id="map-th"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div id="map-ca"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Canada</h4>
+                        <p><a href="mailto:ca@discardapp.com">ca@discardapp.com</a></p>
+                        <p>
+                            +1 604 734 8844
+                        </p>
+                        <p>
+                            5588 Patterson Avenue, Burnaby, BC, Canada V5H 0A7
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<div id="footer-container">
-    Copyright © 2016 Panik Systems Inc. All rights reserved.
-</div>
+    <div id="footer-container">
+        Copyright © 2016 Panik Systems Inc. All rights reserved.
+    </div>
 </body>
 </html>
 

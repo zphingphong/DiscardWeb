@@ -125,6 +125,13 @@ body {
   color: white;
   background-image: url('../assets/images/bg.png');
 
+  a {
+    color: white;
+    &:hover, &:active, &:focus {
+      color: white;
+    }
+  }
+
   h1 {
     text-align: center;
   }
@@ -204,6 +211,9 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
+  h3 {
+    color: @orange-color;
+  }
   ul {
     padding: 0;
   }
@@ -249,6 +259,22 @@ body {
 .features {
   .feature-desc {
     line-height: 3rem;
+  }
+}
+
+/***********************************************************************
+*  CONTACT
+***********************************************************************/
+#contact-container {
+  padding: 40px 3%;
+  .row {
+    padding: 10px 0;
+  }
+  #map-th {
+    height: 260px;
+  }
+  #map-ca {
+    height: 210px;
   }
 }
 
