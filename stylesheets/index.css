@@ -10,7 +10,7 @@
 }
 @font-face {
   font-family: 'bangna-new';
-  src: url('../assets/fonts/bangna-new-webfont.woff2') format('woff2'), url('../assets/fonts/bangna-new-webfont.woff') format('woff');
+  src: url('../assets/fonts/BangnaNew.eot?#iefix') format('embedded-opentype'), url('../assets/fonts/BangnaNew.woff') format('woff'), url('../assets/fonts/BangnaNew.ttf') format('truetype'), url('../assets/fonts/BangnaNew.svg#BangnaNew') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -149,6 +149,10 @@ body .black-opaque-bg {
   background-color: rgba(0, 0, 0, 0.8);
   padding: 30px 3%;
   border-radius: 20px;
+}
+body .modal .modal-content {
+  background-color: rgba(0, 0, 0, 0.8);
+  text-align: center;
 }
 /***********************************************************************
 *  COVER
@@ -355,4 +359,22 @@ body .black-opaque-bg {
 #footer-container {
   font-size: 1rem;
   padding: 10px;
+}
+/***********************************************************************
+*  LANGUAGE SWITCHER
+***********************************************************************/
+#language-popup-container a {
+  width: 45px;
+  height: 45px;
+}
+#language-popup-container a .th-lang {
+  background: url('../assets/images/th-icon.png');
+}
+#language-popup-container a .en-lang {
+  background: url('../assets/images/en-icon.png');
+}
+#language-popup-container a:hover,
+#language-popup-container a:active,
+#language-popup-container a:focus {
+  background-color: #ff9500;
 }

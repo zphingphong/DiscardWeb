@@ -9,9 +9,11 @@
   font-style: normal;
 }
 
+
 @font-face {
   font-family: 'bangna-new';
-  src: url('../assets/fonts/bangna-new-webfont.woff2') format('woff2'), url('../assets/fonts/bangna-new-webfont.woff') format('woff');font-weight: normal;
+  src: url('../assets/fonts/BangnaNew.eot?#iefix') format('embedded-opentype'),  url('../assets/fonts/BangnaNew.woff') format('woff'), url('../assets/fonts/BangnaNew.ttf')  format('truetype'), url('../assets/fonts/BangnaNew.svg#BangnaNew') format('svg');
+  font-weight: normal;
   font-style: normal;
 }
 
@@ -172,6 +174,13 @@ body {
     background-color: @opaque-darker-black-color;
     padding: 30px 3%;
     border-radius: 20px;
+  }
+
+  .modal {
+    .modal-content {
+      background-color: @opaque-darker-black-color;
+      text-align: center;
+    }
   }
 }
 
@@ -398,4 +407,23 @@ body {
 #footer-container {
   font-size: 1rem;
   padding: 10px;
+}
+
+/***********************************************************************
+*  LANGUAGE SWITCHER
+***********************************************************************/
+#language-popup-container {
+  a {
+    width: 45px;
+    height: 45px;
+    .th-lang {
+      background: url('../assets/images/th-icon.png');
+    }
+    .en-lang {
+      background: url('../assets/images/en-icon.png');
+    }
+    &:hover, &:active, &:focus {
+      background-color: @orange-color;
+    }
+  }
 }
