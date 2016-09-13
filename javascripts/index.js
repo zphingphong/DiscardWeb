@@ -71,3 +71,19 @@ $(function() {
   }
   profilesCarousel();
 });
+
+function setEnLang(){
+  if (typeof(Storage) !== 'undefined') {
+    localStorage.setItem('language', 'en');
+  } else {
+    // Sorry! No Web Storage support..
+  }
+}
+
+function setThLang(){
+  if (typeof(Storage) !== 'undefined') {
+    localStorage.setItem('language', 'th');
+  } else {
+    // Sorry! No Web Storage support..
+  }
+}
