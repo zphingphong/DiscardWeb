@@ -70,6 +70,14 @@ $(function() {
     loop();
   }
   profilesCarousel();
+
+  if(localStorage.getItem('language')) {
+    $('#language-popup-container').modal('hide');
+    if (localStorage.getItem('language') === 'th') {
+      $('.en-content').hide();
+      $('.th-content').show();
+    }
+  }
 });
 
 function setEnLang(){
@@ -83,6 +91,8 @@ function setEnLang(){
 function setThLang(){
   if (typeof(Storage) !== 'undefined') {
     localStorage.setItem('language', 'th');
+    $('.en-content').hide();
+    $('.th-content').show();
   } else {
     // Sorry! No Web Storage support..
   }

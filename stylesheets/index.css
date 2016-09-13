@@ -363,6 +363,9 @@ body .modal .modal-content {
 /***********************************************************************
 *  LANGUAGE SWITCHER
 ***********************************************************************/
+.th-content {
+  display: none;
+}
 #language-popup-container a {
   width: 100px;
   height: 45px;
