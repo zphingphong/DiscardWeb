@@ -364,8 +364,21 @@ body .modal .modal-content {
 *  LANGUAGE SWITCHER
 ***********************************************************************/
 #language-popup-container a {
-  width: 45px;
+  width: 100px;
   height: 45px;
+  display: inline-block;
+}
+#language-popup-container a:hover,
+#language-popup-container a:active,
+#language-popup-container a:focus {
+  text-decoration: none;
+  color: #ff9500;
+  -o-transition: color 0.8s ease-out;
+  -ms-transition: color 0.8s ease-out;
+  -moz-transition: color 0.8s ease-out;
+  -webkit-transition: color 0.8s ease-out;
+  transition: color 0.8s ease-out;
+  cursor: pointer;
 }
 #language-popup-container a .th-lang {
   background: url('../assets/images/th-icon.png');
@@ -373,8 +386,17 @@ body .modal .modal-content {
 #language-popup-container a .en-lang {
   background: url('../assets/images/en-icon.png');
 }
-#language-popup-container a:hover,
-#language-popup-container a:active,
-#language-popup-container a:focus {
+#language-popup-container a img {
+  margin-bottom: 10px;
+}
+#language-popup-container a img:hover,
+#language-popup-container a img:active,
+#language-popup-container a img:focus {
   background-color: #ff9500;
+  border-radius: 7px;
+  -o-transition: background-color 0.8s ease-out;
+  -ms-transition: background-color 0.8s ease-out;
+  -moz-transition: background-color 0.8s ease-out;
+  -webkit-transition: background-color 0.8s ease-out;
+  transition: background-color 0.8s ease-out;
 }

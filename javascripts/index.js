@@ -4,6 +4,8 @@
 $(function() {
   $.smartbanner({ daysHidden: 0, daysReminder: 0, title:'Discard', hideOnInstall: false, layer: true });
 
+  $('#language-popup-container').modal();
+
   $('.store-item').addClass('hideme').viewportChecker({
     classToAdd: 'visible animated pulse'
   });
