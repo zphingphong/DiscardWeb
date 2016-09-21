@@ -72,6 +72,33 @@
   position: absolute;
   right: 0;
 }
+.discard-navbar .th-lang img,
+.navbar-header .th-lang img,
+.discard-navbar .en-lang img,
+.navbar-header .en-lang img {
+  width: 23px;
+}
+.discard-navbar .th-lang img:hover,
+.navbar-header .th-lang img:hover,
+.discard-navbar .en-lang img:hover,
+.navbar-header .en-lang img:hover,
+.discard-navbar .th-lang img:active,
+.navbar-header .th-lang img:active,
+.discard-navbar .en-lang img:active,
+.navbar-header .en-lang img:active,
+.discard-navbar .th-lang img:focus,
+.navbar-header .th-lang img:focus,
+.discard-navbar .en-lang img:focus,
+.navbar-header .en-lang img:focus {
+  background-color: #ff9500;
+  border-radius: 4px;
+  -o-transition: background-color 0.8s ease-out;
+  -ms-transition: background-color 0.8s ease-out;
+  -moz-transition: background-color 0.8s ease-out;
+  -webkit-transition: background-color 0.8s ease-out;
+  transition: background-color 0.8s ease-out;
+  cursor: pointer;
+}
 .navbar-toggle {
   border: none;
   outline: none;
@@ -363,9 +390,6 @@ body .modal .modal-content {
 /***********************************************************************
 *  LANGUAGE SWITCHER
 ***********************************************************************/
-.th-content {
-  display: none;
-}
 #language-popup-container a {
   width: 100px;
   height: 45px;

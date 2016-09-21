@@ -76,6 +76,9 @@ $(function() {
     if (localStorage.getItem('language') === 'th') {
       $('.en-content').hide();
       $('.th-content').show();
+    } else {
+      $('.en-content').show();
+      $('.th-content').hide();
     }
   }
 });
@@ -83,6 +86,8 @@ $(function() {
 function setEnLang(){
   if (typeof(Storage) !== 'undefined') {
     localStorage.setItem('language', 'en');
+    $('.en-content').show();
+    $('.th-content').hide();
   } else {
     // Sorry! No Web Storage support..
   }

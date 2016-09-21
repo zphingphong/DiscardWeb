@@ -92,6 +92,25 @@
   right: 0;
 }
 
+
+.discard-navbar, .navbar-header {
+  .th-lang, .en-lang {
+    img {
+      width: 23px;
+      &:hover, &:active, &:focus {
+        background-color: @orange-color;
+        border-radius: 4px;
+        -o-transition: background-color .8s ease-out;
+        -ms-transition: background-color .8s ease-out;
+        -moz-transition: background-color .8s ease-out;
+        -webkit-transition: background-color .8s ease-out;
+        transition: background-color .8s ease-out;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
 .navbar-toggle {
   border: none;
   outline: none;
@@ -412,10 +431,6 @@ body {
 /***********************************************************************
 *  LANGUAGE SWITCHER
 ***********************************************************************/
-.th-content {
-  display: none;
-}
-
 #language-popup-container {
   a {
     width: 100px;
